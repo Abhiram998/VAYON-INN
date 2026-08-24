@@ -195,7 +195,7 @@ export default function Home() {
         <div className="mt-8 -mx-margin-mobile md:-mx-margin-desktop">
           <CarouselScrollWrapper>
             {featuredDestinations.map((dest) => (
-              <div key={dest.id} className="snap-start shrink-0 w-[85vw] sm:w-[350px] lg:w-[400px]">
+              <div key={dest.id} className="snap-start shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
                 <Link href={`/discover#${dest.slug}`} className="group block h-full">
                   <div className="relative aspect-[4/3] overflow-hidden mb-4 rounded-sm bg-surface-dim">
                     <Image
