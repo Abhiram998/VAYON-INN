@@ -107,8 +107,8 @@ export default function Home() {
           <div className="mt-12 overflow-hidden">
             <CarouselScrollWrapper>
               {featuredRooms.map((room, idx) => (
-                <div key={`${room.id}-${idx}`} className="snap-start shrink-0">
-                  <RoomCard room={room} className="w-[85vw] sm:w-[400px] lg:w-[450px]" variant="minimal" />
+                <div key={`${room.id}-${idx}`} className="snap-start shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
+                  <RoomCard room={room} variant="minimal" />
                 </div>
               ))}
             </CarouselScrollWrapper>
