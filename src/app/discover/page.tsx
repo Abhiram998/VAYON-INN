@@ -38,9 +38,7 @@ export default function DiscoverPage() {
 
       {/* Tabbed Carousel Section */}
       <section className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto">
-        <ScrollReveal>
-          <DiscoverTabs />
-        </ScrollReveal>
+        <DiscoverTabs />
       </section>
     </main>
   );
