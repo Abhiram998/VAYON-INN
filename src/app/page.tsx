@@ -112,7 +112,7 @@ export default function Home() {
             <div className="flex animate-marquee hover:[animation-play-state:paused] gap-6 md:gap-gutter w-max">
             {/* Duplicate array to create two identical halves for seamless -50% translation */}
             {[...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms].map((room, idx) => (
-              <RoomCard room={room} key={`${room.id}-${idx}`} className="w-80 lg:w-96 shrink-0" />
+              <RoomCard room={room} key={`${room.id}-${idx}`} className="w-80 lg:w-96 shrink-0" variant="minimal" />
             ))}
             </div>
           </div>
