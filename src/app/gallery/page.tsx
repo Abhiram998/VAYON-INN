@@ -69,10 +69,10 @@ export default function GalleryPage() {
             Rooms & Suites
           </button>
           <button className="font-label-caps text-label-caps text-on-surface-variant hover:text-brand-gold pb-1 uppercase tracking-widest transition-colors duration-500">
-            Gastronomy
+            Architecture
           </button>
           <button className="font-label-caps text-label-caps text-on-surface-variant hover:text-brand-gold pb-1 uppercase tracking-widest transition-colors duration-500">
-            Wellness
+            Reception
           </button>
         </ScrollReveal>
       </section>

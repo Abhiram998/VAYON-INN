@@ -98,42 +98,37 @@ export default function Home() {
               Rooms & Suites
             </h3>
           </div>
-          <div className="flex gap-4">
-            <button className="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors group" aria-label="Previous room">
-              <span className="material-symbols-outlined group-hover:-translate-x-1 transition-transform" style={{ fontVariationSettings: "'FILL' 0" }}>arrow_left_alt</span>
-            </button>
-            <button className="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors group" aria-label="Next room">
-              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform" style={{ fontVariationSettings: "'FILL' 0" }}>arrow_right_alt</span>
-            </button>
-          </div>
         </div>
 
-        <div className="px-margin-mobile md:px-margin-desktop pb-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-          {featuredRooms.map((room) => (
-            <Link href={`/rooms/${room.slug}`} key={room.id} className="group block w-full">
-              <div className="aspect-[4/5] relative overflow-hidden mb-6 bg-surface-container">
-                <Image
-                  src={room.images.main.url}
-                  alt={room.images.main.alt}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-              <div className="flex justify-between items-start">
-                <div>
-                  <h4 className="font-headline-md text-headline-md text-on-surface mb-2">{room.name}</h4>
-                  <p className="font-body-md text-body-md text-on-surface-variant">
-                    {room.size ? `${room.size} sq m` : "Size Placeholder"} / {room.bedType || "Bed Placeholder"}
+        <div className="pb-8 w-full overflow-hidden relative">
+          <div className="flex animate-marquee hover:[animation-play-state:paused] gap-4 md:gap-gutter w-max px-4 md:px-margin-desktop">
+            {/* Duplicate array to create two identical halves for seamless -50% translation */}
+            {[...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms].map((room, idx) => (
+              <Link href={`/rooms/${room.slug}`} key={`${room.id}-${idx}`} className="group block w-[85vw] md:w-[400px] shrink-0">
+                <div className="aspect-[4/5] relative overflow-hidden mb-6 bg-surface-container">
+                  <Image
+                    src={room.images.main.url}
+                    alt={room.images.main.alt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 768px) 85vw, 400px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <div className="flex justify-between items-start whitespace-normal">
+                  <div>
+                    <h4 className="font-headline-md text-headline-md text-on-surface mb-2">{room.name}</h4>
+                    <p className="font-body-md text-body-md text-on-surface-variant">
+                      {room.size ? `${room.size} sq m` : "Size Placeholder"} / {room.bedType || "Bed Placeholder"}
+                    </p>
+                  </div>
+                  <p className="font-body-lg text-body-lg text-brand-gold shrink-0 ml-4">
+                    {room.price ? `From $${room.price}` : "Price TBD"}
                   </p>
                 </div>
-                <p className="font-body-lg text-body-lg text-brand-gold">
-                  {room.price ? `From $${room.price}` : "Price TBD"}
-                </p>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
       </ScrollReveal>
 
