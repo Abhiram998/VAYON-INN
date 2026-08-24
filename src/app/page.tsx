@@ -104,7 +104,7 @@ export default function Home() {
         </div>
 
         <div className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto pb-8 relative">
-          <div className="mt-12 overflow-hidden">
+          <div className="mt-12">
             <CarouselScrollWrapper>
               {featuredRooms.map((room, idx) => (
                 <div key={`${room.id}-${idx}`} className="snap-start shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
