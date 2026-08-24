@@ -60,7 +60,7 @@ export default function Home() {
       <div className="h-48 md:h-32"></div>
 
       {/* 4. About / Hotel Introduction */}
-      <ScrollReveal className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto">
+      <ScrollReveal className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
           <div className="md:col-span-5 md:col-start-2 relative z-10 mb-10 md:mb-0">
             <h2 className="font-label-caps text-label-caps text-brand-gold/70 uppercase tracking-[0.2em] mb-6">
@@ -69,7 +69,7 @@ export default function Home() {
             <h3 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8">
               A Sanctuary of Refined Elegance
             </h3>
-            <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 font-light">
+            <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 font-light leading-relaxed">
               Nestled in the vibrant heart of the metropolis, {hotelConfig.name} offers an unparalleled escape. Every detail is meticulously curated to provide an atmosphere of poised tranquility. Discover spaces that inspire and restore.
             </p>
             <Link
@@ -119,7 +119,7 @@ export default function Home() {
       </ScrollReveal>
 
       {/* 6. Hotel Amenities / Experience */}
-      <ScrollReveal className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto text-center gold-divider">
+      <ScrollReveal className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto text-center gold-divider">
         <h2 className="font-label-caps text-label-caps text-brand-gold uppercase tracking-[0.2em] mb-4">
           Curated Moments
         </h2>
@@ -158,7 +158,7 @@ export default function Home() {
       </ScrollReveal>
 
       {/* 7. Gallery Preview */}
-      <ScrollReveal className="py-section-gap bg-surface-container">
+      <ScrollReveal className="py-16 md:py-24 bg-surface-container">
         <div className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-label-caps text-label-caps text-brand-gold uppercase tracking-[0.2em] mb-4">Gallery</h2>
@@ -191,7 +191,7 @@ export default function Home() {
       </ScrollReveal>
 
       {/* 8. Nearby Destinations */}
-      <ScrollReveal className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto gold-divider">
+      <ScrollReveal className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto gold-divider">
         <h2 className="font-label-caps text-label-caps text-brand-gold uppercase tracking-[0.2em] mb-4">Discover</h2>
         <h3 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-12">Nearby Attractions</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -209,7 +209,7 @@ export default function Home() {
       </ScrollReveal>
 
       {/* 9. Location / Google Maps placeholder */}
-      <ScrollReveal className="py-section-gap bg-surface-container-lowest">
+      <ScrollReveal className="py-16 md:py-24 bg-surface-container-lowest">
         <div className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="font-label-caps text-label-caps text-brand-gold uppercase tracking-[0.2em] mb-4">Location</h2>

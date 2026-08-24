@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { mockRooms, hotelConfig } from "@/lib/mockData";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import RoomCard from "@/components/ui/RoomCard";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -247,38 +248,18 @@ export default async function RoomDetailsPage({ params }: Props) {
         </div>
 
         {/* Similar Rooms Section */}
-        <section className="bg-surface-container-low py-16 md:py-section-gap">
+        <section className="bg-surface-container-low py-16 md:py-24">
           <div className="max-w-[var(--spacing-container-max)] mx-auto px-margin-mobile md:px-margin-desktop">
-            <ScrollReveal>
-              <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-12 text-center">
+            <ScrollReveal className="text-center mb-12">
+              <span className="font-label-caps text-label-caps text-brand-gold uppercase tracking-[0.2em] block mb-4">More Rooms</span>
+              <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">
                 Discover More
               </h2>
             </ScrollReveal>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
               {similarRooms.map((r, idx) => (
-                <ScrollReveal key={r.id} delay={idx * 150}>
-                  <Link href={`/rooms/${r.slug}`} className="group block relative overflow-hidden bg-surface-container-lowest">
-                    <div className="h-64 md:h-72 overflow-hidden relative">
-                      <Image
-                        src={r.images.main.url}
-                        alt={r.images.main.alt}
-                        fill
-                        className="object-cover transition-transform duration-1000 group-hover:scale-105"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <h3 className="font-headline-md text-headline-md text-primary mb-2">{r.name}</h3>
-                      <div className="flex justify-between items-center">
-                        <span className="font-body-md text-body-md text-on-surface-variant">
-                          From {r.price ? `$${r.price}` : "POA"} / night
-                        </span>
-                        <span className="material-symbols-outlined text-brand-gold opacity-0 group-hover:opacity-100 transition-opacity duration-1000" style={{ fontVariationSettings: "'FILL' 0" }}>
-                          arrow_forward
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
+                <ScrollReveal key={r.id} delay={idx * 150} className="w-full">
+                  <RoomCard room={r} />
                 </ScrollReveal>
               ))}
             </div>

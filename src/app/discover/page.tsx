@@ -32,7 +32,7 @@ export default function DiscoverPage() {
       {/* Destinations Grid */}
       <section className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-gutter mb-16 md:mb-section-gap">
         {mockDestinations.map((destination, index) => (
-          <ScrollReveal key={destination.id} delay={index * 150} className="group relative overflow-hidden bg-surface-container rounded-xl shadow-sm border border-outline-variant hover:border-brand-gold transition-colors duration-300 flex flex-col">
+          <ScrollReveal key={destination.id} delay={index * 150} className="group relative overflow-hidden bg-surface-container rounded-sm shadow-sm border border-outline-variant/30 hover:border-brand-gold/40 transition-colors duration-300 flex flex-col">
             <Link href={`/discover/${destination.slug}`} className="flex flex-col flex-grow">
               <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
                 <Image
