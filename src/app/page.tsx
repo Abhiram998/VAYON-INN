@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import BookingWidget from "@/components/ui/BookingWidget";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import PreFooterCTA from "@/components/ui/PreFooterCTA";
 import { mockRooms, mockDestinations, hotelConfig } from "@/lib/mockData";
 
 export default function Home() {
@@ -255,7 +254,28 @@ export default function Home() {
       </ScrollReveal>
 
       {/* 10. Final Booking CTA */}
-      <PreFooterCTA />
+      <ScrollReveal className="relative py-32 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-surface-container-high">
+          <Image
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwF6-tJ8I03DY5SRDfPVWgxx3ef313BHxIOOFptTttUmBaKSWujgDlHFPKWMHv5ISfy5lbIKUjkj_fP1Is9XSyFR9pgLoW45Cv50a1eH0jj4GoZdeayQA3SfTswtoM8zr07_ZK8MxACAeiDF9kJqAYjk9baWH1CKyZWikP0dczNnO1Uj-RlTTx71H6stxofkpQWXsJg250R4PBGXis-OZhkENWHB3OIf2O8e1Zn-ZOKoToSiB6yscM"
+            alt="Soft blurred abstract background for booking call to action"
+            fill
+            className="object-cover opacity-30 mix-blend-luminosity"
+            sizes="100vw"
+          />
+        </div>
+        <div className="relative z-10 text-center px-margin-mobile">
+          <h2 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8">
+            Make Your Stay Memorable
+          </h2>
+          <Link
+            href="#booking"
+            className="inline-block bg-brand-gold text-white px-12 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-on-surface-variant transition-colors shadow-xl"
+          >
+            Reserve Your Experience
+          </Link>
+        </div>
+      </ScrollReveal>
     </>
   );
 }

@@ -91,29 +91,6 @@ export default function Footer() {
               </span>
             </a>
           </div>
-          
-          <div className="mt-8 pt-4">
-            <p className="font-label-caps text-[10px] text-white/50 uppercase tracking-widest mb-3">
-              VIP Newsletter
-            </p>
-            <form className="relative flex items-center border-b border-brand-gold/30 focus-within:border-brand-gold transition-colors duration-300 pb-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full bg-transparent border-none p-0 text-white font-body-md text-sm placeholder-white/30 focus:ring-0 outline-none"
-                required
-              />
-              <button 
-                type="submit"
-                className="text-brand-gold hover:text-white transition-colors duration-300 ml-2"
-                aria-label="Subscribe"
-              >
-                <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: "'FILL' 0" }}>
-                  arrow_forward
-                </span>
-              </button>
-            </form>
-          </div>
         </div>
       </div>
     </footer>

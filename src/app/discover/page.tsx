@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { mockDestinations, hotelConfig } from "@/lib/mockData";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import PreFooterCTA from "@/components/ui/PreFooterCTA";
 
 export const metadata: Metadata = {
   title: "Explore Nearby",
@@ -74,8 +73,6 @@ export default function DiscoverPage() {
           </ScrollReveal>
         ))}
       </section>
-
-      <PreFooterCTA />
     </main>
   );
 }
