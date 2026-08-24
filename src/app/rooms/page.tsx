@@ -71,9 +71,8 @@ export default function RoomsPage() {
         <ScrollReveal className="flex flex-wrap gap-6 mb-12 border-b border-outline-variant/30 pb-4">
           <span className="font-label-caps text-label-caps uppercase text-on-surface-variant py-2 mr-2 hidden sm:inline-block tracking-widest">Filters:</span>
           <button className="font-body-md text-body-md text-brand-gold border-b border-brand-gold pb-1">All Rooms</button>
-          <button className="font-body-md text-body-md text-on-surface-variant hover:text-brand-gold transition-colors pb-1">Suites</button>
-          <button className="font-body-md text-body-md text-on-surface-variant hover:text-brand-gold transition-colors pb-1">Ocean View</button>
-          <button className="font-body-md text-body-md text-on-surface-variant hover:text-brand-gold transition-colors pb-1">Penthouse</button>
+          <button className="font-body-md text-body-md text-on-surface-variant hover:text-brand-gold transition-colors pb-1">Executive Rooms</button>
+          <button className="font-body-md text-body-md text-on-surface-variant hover:text-brand-gold transition-colors pb-1">Signature Suites</button>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-16 md:gap-y-24 lg:gap-gutter">
