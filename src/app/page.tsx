@@ -100,8 +100,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="pb-8 w-full overflow-hidden relative">
-          <div className="flex animate-marquee hover:[animation-play-state:paused] gap-4 md:gap-gutter w-max px-4 md:px-margin-desktop">
+        <div className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto pb-8 relative">
+          {/* Gradient fade masks for polished scrolling effect */}
+          <div className="absolute top-0 bottom-0 left-margin-mobile md:left-margin-desktop w-16 md:w-32 bg-gradient-to-r from-surface-container-lowest to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute top-0 bottom-0 right-margin-mobile md:right-margin-desktop w-16 md:w-32 bg-gradient-to-l from-surface-container-lowest to-transparent z-10 pointer-events-none"></div>
+
+          {/* Marquee Track Container */}
+          <div className="w-full overflow-hidden relative">
+            <div className="flex animate-marquee hover:[animation-play-state:paused] gap-4 md:gap-gutter w-max">
             {/* Duplicate array to create two identical halves for seamless -50% translation */}
             {[...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms].map((room, idx) => (
               <Link href={`/rooms/${room.slug}`} key={`${room.id}-${idx}`} className="group block w-[85vw] md:w-[400px] shrink-0">
@@ -128,6 +134,7 @@ export default function Home() {
                 </div>
               </Link>
             ))}
+            </div>
           </div>
         </div>
       </ScrollReveal>
