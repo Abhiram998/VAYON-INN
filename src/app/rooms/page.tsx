@@ -75,7 +75,7 @@ export default function RoomsPage() {
           <button className="font-body-md text-body-md text-on-surface-variant hover:text-brand-gold transition-colors pb-1">Signature Suites</button>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-gutter">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
           {mockRooms.map((room, index) => (
             <ScrollReveal key={room.id} delay={index * 150} className="w-full">
               <RoomCard room={room} />

@@ -7,11 +7,11 @@ interface RoomCardProps {
   className?: string;
 }
 
-export default function RoomCard({ room, className = "w-full" }: RoomCardProps) {
+export default function RoomCard({ room, className = "" }: RoomCardProps) {
   return (
-    <div className={`group flex flex-col max-h-[70vh] ${className}`}>
+    <div className={`group flex flex-col w-full h-full overflow-hidden ${className}`}>
       {/* Fixed Aspect Ratio Image */}
-      <Link href={`/rooms/${room.slug}`} className="block relative aspect-[4/3] overflow-hidden bg-surface-container-high rounded-sm mb-6 shrink-0">
+      <Link href={`/rooms/${room.slug}`} className="relative w-full aspect-[4/3] flex-shrink-0 overflow-hidden bg-surface-container-high rounded-sm block">
         <Image
           src={room.images.main.url}
           alt={room.images.main.alt}
@@ -23,14 +23,14 @@ export default function RoomCard({ room, className = "w-full" }: RoomCardProps) 
       </Link>
 
       {/* Card Body */}
-      <div className="flex flex-col flex-grow px-1 whitespace-normal">
+      <div className="flex flex-col flex-grow pt-6 space-y-4 whitespace-normal px-1">
         {/* Room Title */}
-        <h2 className="font-headline-md text-2xl md:text-headline-md text-primary mb-3">
+        <h2 className="font-headline-md text-2xl md:text-headline-md text-primary">
           {room.name}
         </h2>
 
         {/* Specs Row */}
-        <div className="flex flex-wrap gap-4 font-body-md text-sm sm:text-body-md text-on-surface-variant mb-4">
+        <div className="flex flex-wrap gap-4 font-body-md text-sm sm:text-body-md text-on-surface-variant">
           <span className="flex items-center gap-1.5">
             <span className="material-symbols-outlined text-[16px] text-brand-gold/50" style={{ fontVariationSettings: "'FILL' 0" }}>square_foot</span>
             {room.size ? `${room.size} sq m` : "Size Placeholder"}
@@ -46,7 +46,7 @@ export default function RoomCard({ room, className = "w-full" }: RoomCardProps) 
         </div>
 
         {/* Description */}
-        <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant/80 line-clamp-2 mb-6">
+        <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant/80 line-clamp-2">
           {room.description}
         </p>
 
