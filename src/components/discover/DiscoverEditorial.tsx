@@ -15,12 +15,12 @@ export default function DiscoverEditorial({ items }: DiscoverEditorialProps) {
         return (
           <ScrollReveal
             key={item.id}
-            className="py-16 md:py-24 lg:py-32 gold-divider"
+            className="min-h-[80vh] sm:min-h-[70vh] flex items-center py-16 gold-divider"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center w-full">
               {/* Image Column */}
               <div
-                className={`relative w-full aspect-[4/3] lg:aspect-[3/4] overflow-hidden bg-surface-container-high rounded-sm ${
+                className={`relative w-full aspect-[4/3] lg:aspect-[3/4] max-h-[600px] lg:max-h-[70vh] overflow-hidden bg-surface-container-high rounded-sm ${
                   isEven ? "lg:order-2" : "lg:order-1"
                 }`}
               >
@@ -37,8 +37,8 @@ export default function DiscoverEditorial({ items }: DiscoverEditorialProps) {
               <div
                 className={`flex flex-col justify-center ${
                   isEven
-                    ? "lg:order-1 lg:pr-16 xl:pr-24"
-                    : "lg:order-2 lg:pl-16 xl:pl-24"
+                    ? "lg:order-1 lg:pr-8 xl:pr-12"
+                    : "lg:order-2 lg:pl-8 xl:pl-12"
                 }`}
               >
                 {/* Category Label */}
