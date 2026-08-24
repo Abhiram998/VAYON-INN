@@ -8,8 +8,10 @@ import { mockRooms, hotelConfig } from "@/lib/mockData";
 import { topPlaces } from "@/data/discover";
 
 export default function Home() {
-  const featuredRooms = mockRooms.filter((room) => room.featured).slice(0, 3);
-  const featuredDestinations = topPlaces.slice(0, 3);
+  // Duplicate mockRooms so the carousel has enough items to scroll on desktop
+  const featuredRooms = [...mockRooms.filter((room) => room.featured), ...mockRooms.filter((room) => room.featured)].slice(0, 6);
+  // Increase to 6 destinations so the carousel has enough items to scroll
+  const featuredDestinations = topPlaces.slice(0, 6);
 
   return (
     <>
@@ -104,8 +106,8 @@ export default function Home() {
         <div className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto pb-8 relative">
           <div className="mt-12 overflow-hidden -mx-margin-mobile md:-mx-margin-desktop">
             <CarouselScrollWrapper>
-              {mockRooms.map((room) => (
-                <div key={room.id} className="snap-start shrink-0">
+              {featuredRooms.map((room, idx) => (
+                <div key={`${room.id}-${idx}`} className="snap-start shrink-0">
                   <RoomCard room={room} className="w-[85vw] sm:w-[400px] lg:w-[450px]" variant="minimal" />
                 </div>
               ))}
