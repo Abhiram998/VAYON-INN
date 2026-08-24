@@ -88,36 +88,36 @@ export default function Home() {
       </ScrollReveal>
 
       {/* 5. Featured Rooms */}
-      <ScrollReveal className="py-section-gap bg-surface-container-lowest overflow-hidden gold-divider">
-        <div className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
-          <div>
-            <h2 className="font-label-caps text-label-caps text-brand-gold uppercase tracking-[0.2em] mb-4">
-              Accommodations
-            </h2>
-            <h3 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
-              Rooms & Suites
-            </h3>
-          </div>
+      <ScrollReveal className="py-16 md:py-24 bg-surface-container-lowest overflow-hidden gold-divider">
+        <div className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto mb-16 flex flex-col items-center text-center">
+          <h2 className="font-label-caps text-label-caps text-brand-gold uppercase tracking-[0.2em] mb-4">
+            Accommodations
+          </h2>
+          <h3 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
+            Our Spaces
+          </h3>
         </div>
 
         <div className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto pb-8 relative">
-          {/* Gradient fade masks for polished scrolling effect */}
-          <div className="absolute top-0 bottom-0 left-margin-mobile md:left-margin-desktop w-16 md:w-32 bg-gradient-to-r from-surface-container-lowest to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute top-0 bottom-0 right-margin-mobile md:right-margin-desktop w-16 md:w-32 bg-gradient-to-l from-surface-container-lowest to-transparent z-10 pointer-events-none"></div>
-
-          {/* Marquee Track Container */}
-          <div className="w-full overflow-hidden relative">
-            <div className="flex animate-marquee hover:[animation-play-state:paused] gap-4 md:gap-gutter w-max">
+          {/* Marquee Track Container with proper CSS mask-image fade */}
+          <div 
+            className="w-full overflow-hidden relative"
+            style={{ 
+              maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
+            }}
+          >
+            <div className="flex animate-marquee hover:[animation-play-state:paused] gap-6 md:gap-gutter w-max">
             {/* Duplicate array to create two identical halves for seamless -50% translation */}
             {[...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms].map((room, idx) => (
-              <Link href={`/rooms/${room.slug}`} key={`${room.id}-${idx}`} className="group block w-[85vw] md:w-[400px] shrink-0">
-                <div className="aspect-[4/5] relative overflow-hidden mb-6 bg-surface-container">
+              <Link href={`/rooms/${room.slug}`} key={`${room.id}-${idx}`} className="group block w-80 lg:w-96 shrink-0 max-h-[70vh]">
+                <div className="aspect-[4/3] relative overflow-hidden mb-6 bg-surface-container">
                   <Image
                     src={room.images.main.url}
                     alt={room.images.main.alt}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 768px) 85vw, 400px"
+                    sizes="(max-width: 768px) 320px, 384px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
