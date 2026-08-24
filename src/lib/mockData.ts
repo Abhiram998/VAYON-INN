@@ -48,14 +48,14 @@ export interface Room {
 export const mockRooms: Room[] = [
   {
     id: "r1",
-    slug: "room-placeholder-1",
+    slug: "executive-room",
     name: "Executive Room",
-    description: "Room description placeholder text.",
-    price: null,
-    size: null,
-    bedType: null,
-    maxGuests: null,
-    amenities: [],
+    description: "A sanctuary of modern elegance with curated local artwork, a spa-like en-suite, and panoramic city views.",
+    price: 450,
+    size: 45,
+    bedType: "King Bed",
+    maxGuests: 2,
+    amenities: ["Free Wi-Fi", "Mini Bar", "Espresso Machine", "Rain Shower"],
     featured: true,
     images: {
       main: {
@@ -67,14 +67,14 @@ export const mockRooms: Room[] = [
   },
   {
     id: "r2",
-    slug: "room-placeholder-2",
+    slug: "signature-suite",
     name: "Signature Suite",
-    description: "Room description placeholder text.",
-    price: null,
-    size: null,
-    bedType: null,
-    maxGuests: null,
-    amenities: [],
+    description: "Expansive luxury featuring a separate living area, bespoke furnishings, and exclusive access to the club lounge.",
+    price: 850,
+    size: 65,
+    bedType: "King Bed",
+    maxGuests: 3,
+    amenities: ["Free Wi-Fi", "Lounge Access", "Bathtub", "Premium Toiletries"],
     featured: true,
     images: {
       main: {
@@ -86,14 +86,14 @@ export const mockRooms: Room[] = [
   },
   {
     id: "r3",
-    slug: "room-placeholder-3",
+    slug: "penthouse-suite",
     name: "Penthouse Suite",
-    description: "Room description placeholder text.",
-    price: null,
-    size: null,
-    bedType: null,
-    maxGuests: null,
-    amenities: [],
+    description: "The pinnacle of our offerings. Unrivaled space with a private terrace, dining room, and personalized butler service.",
+    price: 1500,
+    size: 120,
+    bedType: "King Bed",
+    maxGuests: 4,
+    amenities: ["Butler Service", "Private Terrace", "Dining Room", "Jacuzzi"],
     featured: true,
     images: {
       main: {
