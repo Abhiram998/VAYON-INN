@@ -30,7 +30,7 @@ export default function BookingWidget() {
             </label>
             <div className="relative">
               <span
-                className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline"
+                className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-brand-gold"
                 style={{ fontVariationSettings: "'FILL' 0" }}
               >
                 calendar_today
@@ -38,7 +38,7 @@ export default function BookingWidget() {
               <input
                 type="date"
                 required
-                className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 pl-10 py-3 text-body-md text-on-surface transition-colors cursor-pointer outline-none"
+                className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-brand-gold focus:ring-0 pl-10 py-3 text-body-md text-on-surface transition-colors cursor-pointer outline-none"
               />
             </div>
           </div>
@@ -49,7 +49,7 @@ export default function BookingWidget() {
             </label>
             <div className="relative">
               <span
-                className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline"
+                className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-brand-gold"
                 style={{ fontVariationSettings: "'FILL' 0" }}
               >
                 calendar_today
@@ -57,7 +57,7 @@ export default function BookingWidget() {
               <input
                 type="date"
                 required
-                className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 pl-10 py-3 text-body-md text-on-surface transition-colors cursor-pointer outline-none"
+                className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-brand-gold focus:ring-0 pl-10 py-3 text-body-md text-on-surface transition-colors cursor-pointer outline-none"
               />
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function BookingWidget() {
               <label className="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase">
                 Guests
               </label>
-              <select className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 py-3 text-body-md text-on-surface transition-colors cursor-pointer appearance-none outline-none">
+              <select className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-brand-gold focus:ring-0 py-3 text-body-md text-on-surface transition-colors cursor-pointer appearance-none outline-none">
                 <option>1 Adult</option>
                 <option selected>2 Adults</option>
                 <option>3 Adults</option>
@@ -78,7 +78,7 @@ export default function BookingWidget() {
               <label className="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase">
                 Rooms
               </label>
-              <select className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 py-3 text-body-md text-on-surface transition-colors cursor-pointer appearance-none outline-none">
+              <select className="w-full bg-transparent border-0 border-b border-outline-variant focus:border-brand-gold focus:ring-0 py-3 text-body-md text-on-surface transition-colors cursor-pointer appearance-none outline-none">
                 <option selected>1 Room</option>
                 <option>2 Rooms</option>
                 <option>3 Rooms</option>
@@ -90,7 +90,7 @@ export default function BookingWidget() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-secondary text-on-secondary px-6 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-on-secondary-container transition-colors shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full bg-brand-gold text-white px-6 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-surface-tint transition-colors shadow-lg disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {loading ? "Checking..." : "Check Availability"}
             </button>

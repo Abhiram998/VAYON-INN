@@ -81,7 +81,7 @@ export default function GalleryPage() {
       <section className="px-margin-mobile md:px-margin-desktop mb-section-gap">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[200px]">
           {galleryImages.map((image, index) => (
-            <ScrollReveal key={index} className={`relative overflow-hidden bg-surface-container rounded-sm group ${image.span}`}>
+            <ScrollReveal key={index} delay={index * 150} className={`relative overflow-hidden bg-surface-container rounded-sm group ${image.span}`}>
               <Image
                 src={image.url}
                 alt={image.alt}

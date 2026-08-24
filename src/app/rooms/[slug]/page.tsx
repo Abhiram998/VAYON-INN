@@ -151,12 +151,14 @@ export default async function RoomDetailsPage({ params }: Props) {
                   { icon: "ac_unit", text: "Climate Control" },
                   { icon: "room_service", text: "24/7 Room Service" }
                 ].map((amenity, idx) => (
-                  <div key={idx} className="group bg-surface-container-low p-6 flex flex-col items-center text-center border border-surface-variant transition-all duration-700 hover:bg-surface-container hover:-translate-y-1 hover:shadow-lg cursor-pointer">
-                    <span className="material-symbols-outlined text-3xl text-secondary mb-4 transition-transform duration-700 group-hover:scale-110" style={{ fontVariationSettings: "'FILL' 0" }}>
-                      {amenity.icon}
-                    </span>
-                    <h3 className="font-body-md text-body-md text-primary">{amenity.text}</h3>
-                  </div>
+                  <ScrollReveal key={idx} delay={idx * 100} className="h-full">
+                    <div className="group bg-surface-container-low p-6 flex flex-col items-center text-center border border-surface-variant transition-all duration-700 hover:bg-surface-container hover:-translate-y-1 hover:shadow-lg cursor-pointer h-full">
+                      <span className="material-symbols-outlined text-3xl text-brand-gold mb-4 transition-transform duration-700 group-hover:scale-110" style={{ fontVariationSettings: "'FILL' 0" }}>
+                        {amenity.icon}
+                      </span>
+                      <h3 className="font-body-md text-body-md text-primary">{amenity.text}</h3>
+                    </div>
+                  </ScrollReveal>
                 ))}
               </div>
             </ScrollReveal>
@@ -253,8 +255,8 @@ export default async function RoomDetailsPage({ params }: Props) {
               </h2>
             </ScrollReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-              {similarRooms.map((r) => (
-                <ScrollReveal key={r.id}>
+              {similarRooms.map((r, idx) => (
+                <ScrollReveal key={r.id} delay={idx * 150}>
                   <Link href={`/rooms/${r.slug}`} className="group block relative overflow-hidden bg-surface-container-lowest">
                     <div className="h-64 md:h-72 overflow-hidden relative">
                       <Image
@@ -271,7 +273,7 @@ export default async function RoomDetailsPage({ params }: Props) {
                         <span className="font-body-md text-body-md text-on-surface-variant">
                           From {r.price ? `$${r.price}` : "POA"} / night
                         </span>
-                        <span className="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-1000" style={{ fontVariationSettings: "'FILL' 0" }}>
+                        <span className="material-symbols-outlined text-brand-gold opacity-0 group-hover:opacity-100 transition-opacity duration-1000" style={{ fontVariationSettings: "'FILL' 0" }}>
                           arrow_forward
                         </span>
                       </div>
