@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { topPlaces, topActivities, gettingHere } from "@/data/discover";
-import DiscoverCarousel from "./DiscoverCarousel";
+import DiscoverEditorial from "./DiscoverEditorial";
 
 const tabs = [
   { key: "places", label: "Top Places", data: topPlaces },
@@ -20,7 +20,7 @@ export default function DiscoverTabs() {
     <div>
       {/* Tab switcher */}
       <div
-        className="flex gap-1 mb-8 md:mb-12 border-b border-outline-variant/40"
+        className="flex gap-1 mb-16 md:mb-24 border-b border-outline-variant/40"
         role="tablist"
         aria-label="Destination categories"
       >
@@ -54,7 +54,7 @@ export default function DiscoverTabs() {
         role="tabpanel"
         aria-label={activeData.label}
       >
-        <DiscoverCarousel items={activeData.data} />
+        <DiscoverEditorial items={activeData.data} />
       </div>
     </div>
   );
