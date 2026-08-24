@@ -3,11 +3,12 @@ import Link from "next/link";
 import BookingWidget from "@/components/ui/BookingWidget";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import RoomCard from "@/components/ui/RoomCard";
-import { mockRooms, mockDestinations, hotelConfig } from "@/lib/mockData";
+import { mockRooms, hotelConfig } from "@/lib/mockData";
+import { topPlaces } from "@/data/discover";
 
 export default function Home() {
   const featuredRooms = mockRooms.filter((room) => room.featured).slice(0, 3);
-  const featuredDestinations = mockDestinations.slice(0, 3); // using mock dest
+  const featuredDestinations = topPlaces.slice(0, 3);
 
   return (
     <>
@@ -194,17 +195,43 @@ export default function Home() {
       <ScrollReveal className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto gold-divider">
         <h2 className="font-label-caps text-label-caps text-brand-gold uppercase tracking-[0.2em] mb-4">Discover</h2>
         <h3 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-12">Nearby Attractions</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {featuredDestinations.map(dest => (
-            <Link href={`/discover/${dest.slug}`} key={dest.id} className="group block">
-              <div className="relative aspect-video overflow-hidden mb-4">
-                <Image src={dest.mainImage.url} alt={dest.mainImage.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 50vw" />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-gutter">
+          {featuredDestinations.map((dest) => (
+            <Link href="/discover" key={dest.id} className="group block">
+              <div className="relative aspect-[4/3] overflow-hidden mb-4 rounded-xl bg-surface-dim">
+                <Image
+                  src={dest.image}
+                  alt={`${dest.name} in Kochi`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
-              <h4 className="font-headline-md text-headline-md text-on-surface mb-2">{dest.name}</h4>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-2">{dest.shortDescription}</p>
-              <p className="font-label-caps text-brand-gold uppercase">{dest.distance || "Distance Placeholder"}</p>
+              <h4 className="font-headline-md text-lg md:text-xl text-on-surface mb-1.5 group-hover:text-brand-gold transition-colors">
+                {dest.name}
+              </h4>
+              <p className="font-body-md text-sm text-on-surface-variant mb-2 line-clamp-2">
+                {dest.description}
+              </p>
+              <p className="font-label-caps text-label-caps text-brand-gold/70 uppercase tracking-widest">
+                {dest.distance} · {dest.travelTime}
+              </p>
             </Link>
           ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link
+            href="/discover"
+            className="inline-flex items-center text-brand-gold font-label-caps text-label-caps uppercase tracking-widest border-b border-brand-gold pb-1 hover:text-brand-gold/80 hover:border-brand-gold/80 transition-colors group"
+          >
+            Explore All
+            <span
+              className="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform"
+              style={{ fontVariationSettings: "'FILL' 0" }}
+            >
+              arrow_right_alt
+            </span>
+          </Link>
         </div>
       </ScrollReveal>
 
