@@ -49,7 +49,7 @@ export const mockRooms: Room[] = [
   {
     id: "r1",
     slug: "room-placeholder-1",
-    name: "Room Name Placeholder",
+    name: "Executive Room",
     description: "Room description placeholder text.",
     price: null,
     size: null,
@@ -68,7 +68,7 @@ export const mockRooms: Room[] = [
   {
     id: "r2",
     slug: "room-placeholder-2",
-    name: "Room Name Placeholder",
+    name: "Signature Suite",
     description: "Room description placeholder text.",
     price: null,
     size: null,
@@ -87,7 +87,7 @@ export const mockRooms: Room[] = [
   {
     id: "r3",
     slug: "room-placeholder-3",
-    name: "Room Name Placeholder",
+    name: "Penthouse Suite",
     description: "Room description placeholder text.",
     price: null,
     size: null,

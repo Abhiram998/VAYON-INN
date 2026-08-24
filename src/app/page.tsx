@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import BookingWidget from "@/components/ui/BookingWidget";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import RoomCard from "@/components/ui/RoomCard";
 import { mockRooms, mockDestinations, hotelConfig } from "@/lib/mockData";
 
 export default function Home() {
@@ -94,7 +95,7 @@ export default function Home() {
             Accommodations
           </h2>
           <h3 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
-            Our Spaces
+            Rooms & Suites
           </h3>
         </div>
 
@@ -110,29 +111,7 @@ export default function Home() {
             <div className="flex animate-marquee hover:[animation-play-state:paused] gap-6 md:gap-gutter w-max">
             {/* Duplicate array to create two identical halves for seamless -50% translation */}
             {[...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms].map((room, idx) => (
-              <Link href={`/rooms/${room.slug}`} key={`${room.id}-${idx}`} className="group block w-80 lg:w-96 shrink-0 max-h-[70vh]">
-                <div className="aspect-[4/3] relative overflow-hidden mb-6 bg-surface-container">
-                  <Image
-                    src={room.images.main.url}
-                    alt={room.images.main.alt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 768px) 320px, 384px"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </div>
-                <div className="flex justify-between items-start whitespace-normal">
-                  <div>
-                    <h4 className="font-headline-md text-headline-md text-on-surface mb-2">{room.name}</h4>
-                    <p className="font-body-md text-body-md text-on-surface-variant">
-                      {room.size ? `${room.size} sq m` : "Size Placeholder"} / {room.bedType || "Bed Placeholder"}
-                    </p>
-                  </div>
-                  <p className="font-body-lg text-body-lg text-brand-gold shrink-0 ml-4">
-                    {room.price ? `From $${room.price}` : "Price TBD"}
-                  </p>
-                </div>
-              </Link>
+              <RoomCard room={room} key={`${room.id}-${idx}`} className="w-80 lg:w-96 shrink-0" />
             ))}
             </div>
           </div>
