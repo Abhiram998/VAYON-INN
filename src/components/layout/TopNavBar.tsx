@@ -34,7 +34,7 @@ export default function TopNavBar() {
     >
       <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 w-full max-w-[var(--spacing-container-max)] mx-auto relative">
         <Link href="/" className="flex flex-col items-start" onClick={() => setIsOpen(false)}>
-          <span className="font-display-lg text-headline-md tracking-tighter text-primary">
+          <span className="font-display-lg text-headline-md tracking-tighter text-brand-gold">
             {hotelConfig.name}
           </span>
           <span className="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant">
@@ -45,7 +45,7 @@ export default function TopNavBar() {
           <Link
             href="/"
             className={`pb-1 transition-colors duration-300 ${
-              pathname === "/" ? "text-primary border-b border-secondary" : "text-on-surface-variant hover:text-secondary"
+              pathname === "/" ? "text-brand-gold border-b border-brand-gold" : "text-on-surface-variant hover:text-brand-gold"
             }`}
           >
             Home
@@ -53,7 +53,7 @@ export default function TopNavBar() {
           <Link
             href="/rooms"
             className={`pb-1 transition-colors duration-300 ${
-              pathname.startsWith("/rooms") ? "text-primary border-b border-secondary" : "text-on-surface-variant hover:text-secondary"
+              pathname.startsWith("/rooms") ? "text-brand-gold border-b border-brand-gold" : "text-on-surface-variant hover:text-brand-gold"
             }`}
           >
             Rooms
@@ -61,7 +61,7 @@ export default function TopNavBar() {
           <Link
             href="/gallery"
             className={`pb-1 transition-colors duration-300 ${
-              pathname === "/gallery" ? "text-primary border-b border-secondary" : "text-on-surface-variant hover:text-secondary"
+              pathname === "/gallery" ? "text-brand-gold border-b border-brand-gold" : "text-on-surface-variant hover:text-brand-gold"
             }`}
           >
             Gallery
@@ -69,7 +69,7 @@ export default function TopNavBar() {
           <Link
             href="/discover"
             className={`pb-1 transition-colors duration-300 ${
-              pathname.startsWith("/discover") ? "text-primary border-b border-secondary" : "text-on-surface-variant hover:text-secondary"
+              pathname.startsWith("/discover") ? "text-brand-gold border-b border-brand-gold" : "text-on-surface-variant hover:text-brand-gold"
             }`}
           >
             Destinations
@@ -77,7 +77,7 @@ export default function TopNavBar() {
           <Link
             href="/contact"
             className={`pb-1 transition-colors duration-300 ${
-              pathname === "/contact" ? "text-primary border-b border-secondary" : "text-on-surface-variant hover:text-secondary"
+              pathname === "/contact" ? "text-brand-gold border-b border-brand-gold" : "text-on-surface-variant hover:text-brand-gold"
             }`}
           >
             Contact
@@ -85,7 +85,7 @@ export default function TopNavBar() {
         </div>
         <button
           type="button"
-          className="hidden md:inline-flex bg-primary text-on-primary px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest hover:bg-on-surface-variant transition-colors"
+          className="hidden md:inline-flex bg-brand-gold text-white px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest hover:bg-on-surface-variant transition-colors"
         >
           Book Now
         </button>
@@ -104,14 +104,14 @@ export default function TopNavBar() {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-surface border-b border-outline-variant/30 shadow-lg py-4 flex flex-col px-margin-mobile">
-          <Link href="/" className="py-3 text-on-surface-variant hover:text-primary transition-colors border-b border-outline-variant/20" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link href="/rooms" className="py-3 text-on-surface-variant hover:text-primary transition-colors border-b border-outline-variant/20" onClick={() => setIsOpen(false)}>Rooms</Link>
-          <Link href="/gallery" className="py-3 text-on-surface-variant hover:text-primary transition-colors border-b border-outline-variant/20" onClick={() => setIsOpen(false)}>Gallery</Link>
-          <Link href="/discover" className="py-3 text-on-surface-variant hover:text-primary transition-colors border-b border-outline-variant/20" onClick={() => setIsOpen(false)}>Destinations</Link>
-          <Link href="/contact" className="py-3 text-on-surface-variant hover:text-primary transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link href="/" className="py-3 text-on-surface-variant hover:text-brand-gold transition-colors border-b border-outline-variant/20" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link href="/rooms" className="py-3 text-on-surface-variant hover:text-brand-gold transition-colors border-b border-outline-variant/20" onClick={() => setIsOpen(false)}>Rooms</Link>
+          <Link href="/gallery" className="py-3 text-on-surface-variant hover:text-brand-gold transition-colors border-b border-outline-variant/20" onClick={() => setIsOpen(false)}>Gallery</Link>
+          <Link href="/discover" className="py-3 text-on-surface-variant hover:text-brand-gold transition-colors border-b border-outline-variant/20" onClick={() => setIsOpen(false)}>Destinations</Link>
+          <Link href="/contact" className="py-3 text-on-surface-variant hover:text-brand-gold transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
           <button
             type="button"
-            className="w-full mt-4 bg-primary text-on-primary px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest transition-colors hover:bg-on-surface-variant"
+            className="w-full mt-4 bg-brand-gold text-white px-8 py-4 font-label-caps text-label-caps uppercase tracking-widest transition-colors hover:bg-on-surface-variant"
           >
             Book Now
           </button>

@@ -62,16 +62,16 @@ export default function GalleryPage() {
 
         {/* Category Filters */}
         <ScrollReveal className="flex flex-wrap gap-6 mt-12 border-b border-outline-variant/30 pb-4">
-          <button className="font-label-caps text-label-caps text-primary border-b border-secondary pb-1 uppercase tracking-widest">
+          <button className="font-label-caps text-label-caps text-primary border-b border-brand-gold pb-1 uppercase tracking-widest">
             All Spaces
           </button>
-          <button className="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary pb-1 uppercase tracking-widest transition-colors duration-500">
+          <button className="font-label-caps text-label-caps text-on-surface-variant hover:text-brand-gold pb-1 uppercase tracking-widest transition-colors duration-500">
             Rooms & Suites
           </button>
-          <button className="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary pb-1 uppercase tracking-widest transition-colors duration-500">
+          <button className="font-label-caps text-label-caps text-on-surface-variant hover:text-brand-gold pb-1 uppercase tracking-widest transition-colors duration-500">
             Gastronomy
           </button>
-          <button className="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary pb-1 uppercase tracking-widest transition-colors duration-500">
+          <button className="font-label-caps text-label-caps text-on-surface-variant hover:text-brand-gold pb-1 uppercase tracking-widest transition-colors duration-500">
             Wellness
           </button>
         </ScrollReveal>
@@ -95,7 +95,7 @@ export default function GalleryPage() {
         </div>
         
         <ScrollReveal className="flex justify-center mt-16">
-          <button className="bg-transparent border border-secondary text-primary font-label-caps text-label-caps px-8 py-4 uppercase tracking-widest hover:bg-secondary/10 transition-colors duration-500">
+          <button className="bg-transparent border border-brand-gold text-brand-gold font-label-caps text-label-caps px-8 py-4 uppercase tracking-widest hover:bg-brand-gold/10 transition-colors duration-500">
             Load More Spaces
           </button>
         </ScrollReveal>

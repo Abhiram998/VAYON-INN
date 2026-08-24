@@ -230,10 +230,9 @@ export default async function RoomDetailsPage({ params }: Props) {
                     <option>2 Adults, 1 Child</option>
                   </select>
                 </div>
-                {/* CTA */}
                 <button
                   type="button"
-                  className="w-full bg-primary text-on-primary font-label-caps text-label-caps py-4 mt-8 uppercase tracking-widest hover:bg-surface-tint transition-colors"
+                  className="w-full bg-brand-gold text-white font-label-caps text-label-caps py-4 mt-8 uppercase tracking-widest hover:bg-surface-tint transition-colors"
                 >
                   Reserve Suite
                 </button>

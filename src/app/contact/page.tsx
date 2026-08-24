@@ -30,7 +30,7 @@ export default function ContactPage() {
 
             <ScrollReveal className="space-y-6">
               <div className="flex items-start gap-4">
-                <span className="material-symbols-outlined text-secondary mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>location_on</span>
+                <span className="material-symbols-outlined text-brand-gold mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>location_on</span>
                 <div>
                   <h3 className="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-1">Address</h3>
                   <p className="font-body-md text-body-md text-on-surface-variant">
@@ -40,7 +40,7 @@ export default function ContactPage() {
               </div>
               
               <div className="flex items-start gap-4">
-                <span className="material-symbols-outlined text-secondary mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>call</span>
+                <span className="material-symbols-outlined text-brand-gold mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>call</span>
                 <div>
                   <h3 className="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-1">Telephone</h3>
                   <p className="font-body-md text-body-md text-on-surface-variant">{hotelConfig.phone || "Phone Placeholder"}</p>
@@ -48,7 +48,7 @@ export default function ContactPage() {
               </div>
               
               <div className="flex items-start gap-4">
-                <span className="material-symbols-outlined text-secondary mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>chat</span>
+                <span className="material-symbols-outlined text-brand-gold mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>chat</span>
                 <div>
                   <h3 className="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-1">WhatsApp</h3>
                   <p className="font-body-md text-body-md text-on-surface-variant">{hotelConfig.phone || "WhatsApp Placeholder"}</p>
@@ -56,7 +56,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <span className="material-symbols-outlined text-secondary mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>mail</span>
+                <span className="material-symbols-outlined text-brand-gold mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>mail</span>
                 <div>
                   <h3 className="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-1">Email</h3>
                   <p className="font-body-md text-body-md text-on-surface-variant">{hotelConfig.email || "Email Placeholder"}</p>
@@ -143,7 +143,7 @@ export default function ContactPage() {
               
               <button 
                 type="button" 
-                className="w-full bg-primary text-on-primary font-label-caps text-label-caps px-8 py-5 uppercase tracking-widest hover:bg-surface-tint transition-colors mt-4"
+                className="w-full bg-brand-gold text-white font-label-caps text-label-caps px-8 py-5 uppercase tracking-widest hover:bg-surface-tint transition-colors mt-4"
               >
                 Submit Inquiry
               </button>

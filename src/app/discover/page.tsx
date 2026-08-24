@@ -32,7 +32,7 @@ export default function DiscoverPage() {
       {/* Destinations Grid */}
       <section className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-gutter mb-16 md:mb-section-gap">
         {mockDestinations.map((destination) => (
-          <ScrollReveal key={destination.id} className="group relative overflow-hidden bg-surface-container rounded-xl shadow-sm border border-outline-variant hover:border-secondary transition-colors duration-300 flex flex-col">
+          <ScrollReveal key={destination.id} className="group relative overflow-hidden bg-surface-container rounded-xl shadow-sm border border-outline-variant hover:border-brand-gold transition-colors duration-300 flex flex-col">
             <Link href={`/discover/${destination.slug}`} className="flex flex-col flex-grow">
               <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
                 <Image
@@ -51,7 +51,7 @@ export default function DiscoverPage() {
               </div>
               <div className="p-6 md:p-8 flex flex-col flex-grow bg-surface-container">
                 <div className="flex justify-between items-start mb-4">
-                  <h2 className="font-headline-md text-[28px] md:text-headline-md leading-tight transition-colors duration-300 group-hover:text-secondary text-primary">
+                  <h2 className="font-headline-md text-[28px] md:text-headline-md leading-tight transition-colors duration-300 group-hover:text-brand-gold text-primary">
                     {destination.name}
                   </h2>
                 </div>
@@ -63,7 +63,7 @@ export default function DiscoverPage() {
                     <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 0" }}>location_on</span>
                     <span className="font-body-md text-sm md:text-body-md">{destination.distance || "Distance Placeholder"}</span>
                   </div>
-                  <button className="flex items-center space-x-2 text-secondary hover:text-on-surface transition-colors duration-300 font-label-caps text-label-caps uppercase group/btn tracking-widest">
+                  <button className="flex items-center space-x-2 text-brand-gold hover:text-on-surface transition-colors duration-300 font-label-caps text-label-caps uppercase group/btn tracking-widest">
                     <span>View Details</span>
                     <span className="material-symbols-outlined transition-transform duration-300 group-hover/btn:translate-x-1" style={{ fontVariationSettings: "'FILL' 0" }}>arrow_forward</span>
                   </button>
