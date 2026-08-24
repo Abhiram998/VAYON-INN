@@ -5,10 +5,9 @@ import { Room } from "@/lib/mockData";
 interface RoomCardProps {
   room: Room;
   className?: string;
-  variant?: "default" | "carousel";
 }
 
-export default function RoomCard({ room, className = "", variant = "default" }: RoomCardProps) {
+export default function RoomCard({ room, className = "" }: RoomCardProps) {
   return (
     <div className={`group flex flex-col w-full h-full overflow-hidden ${className}`}>
       {/* Fixed Aspect Ratio Image */}
@@ -55,36 +54,20 @@ export default function RoomCard({ room, className = "", variant = "default" }: 
         <div className="mt-auto gold-divider pt-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <span className="font-headline-md text-2xl md:text-headline-md text-primary shrink-0">
-              {room.price ? `From $${room.price}` : "POA"}{" "}
+              {room.price ? `$${room.price}` : "POA"}{" "}
               <span className="font-body-md text-sm text-on-surface-variant">/ night</span>
             </span>
-            
-            {variant === "carousel" ? (
+            <div className="flex gap-3 w-full sm:w-auto">
               <Link
                 href={`/rooms/${room.slug}`}
-                className="inline-flex items-center text-brand-gold font-label-caps text-label-caps uppercase tracking-widest hover:text-brand-gold/80 transition-colors duration-300 group"
+                className="flex-1 sm:flex-none text-center border border-brand-gold/40 text-brand-gold font-label-caps text-label-caps uppercase px-5 py-3 hover:bg-brand-gold/10 transition-colors duration-300 tracking-widest whitespace-nowrap"
               >
-                View Room
-                <span
-                  className="material-symbols-outlined ml-2 text-[18px] group-hover:translate-x-1 transition-transform duration-300"
-                  style={{ fontVariationSettings: "'FILL' 0" }}
-                >
-                  arrow_forward
-                </span>
+                Details
               </Link>
-            ) : (
-              <div className="flex gap-3 w-full sm:w-auto">
-                <Link
-                  href={`/rooms/${room.slug}`}
-                  className="flex-1 sm:flex-none text-center border border-brand-gold/40 text-brand-gold font-label-caps text-label-caps uppercase px-5 py-3 hover:bg-brand-gold/10 transition-colors duration-300 tracking-widest whitespace-nowrap"
-                >
-                  Details
-                </Link>
-                <button className="flex-1 sm:flex-none bg-brand-gold text-white font-label-caps text-label-caps uppercase px-5 py-3 hover:bg-on-surface-variant transition-colors duration-300 shadow-sm tracking-widest whitespace-nowrap">
-                  Book
-                </button>
-              </div>
-            )}
+              <button className="flex-1 sm:flex-none bg-brand-gold text-white font-label-caps text-label-caps uppercase px-5 py-3 hover:bg-on-surface-variant transition-colors duration-300 shadow-sm tracking-widest whitespace-nowrap">
+                Book
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -3,7 +3,6 @@ import Link from "next/link";
 import BookingWidget from "@/components/ui/BookingWidget";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import RoomCard from "@/components/ui/RoomCard";
-import HomeRoomsCarousel from "@/components/home/HomeRoomsCarousel";
 import { mockRooms, hotelConfig } from "@/lib/mockData";
 import { topPlaces } from "@/data/discover";
 
@@ -102,9 +101,20 @@ export default function Home() {
         </div>
 
         <div className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto pb-8 relative">
-          {/* Desktop Carousel - Replaced Marquee with Interactive Component */}
-          <div className="mt-12 overflow-hidden -mx-margin-mobile md:-mx-margin-desktop">
-            <HomeRoomsCarousel rooms={featuredRooms} />
+          {/* Marquee Track Container with proper CSS mask-image fade */}
+          <div 
+            className="w-full overflow-hidden relative"
+            style={{ 
+              maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+              WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
+            }}
+          >
+            <div className="flex animate-marquee hover:[animation-play-state:paused] gap-6 md:gap-gutter w-max">
+            {/* Duplicate array to create two identical halves for seamless -50% translation */}
+            {[...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms].map((room, idx) => (
+              <RoomCard room={room} key={`${room.id}-${idx}`} className="w-80 lg:w-96 shrink-0" />
+            ))}
+            </div>
           </div>
         </div>
       </ScrollReveal>
