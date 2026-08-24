@@ -96,7 +96,7 @@ export default function DiscoverCarousel({ items }: DiscoverCarouselProps) {
           <article
             key={item.id}
             data-card
-            className="flex-shrink-0 w-[82vw] sm:w-[48vw] md:w-[calc(33.333%-14px)] lg:w-[calc(25%-15px)] bg-surface-container rounded-xl overflow-hidden border border-outline-variant hover:border-brand-gold/50 transition-all duration-300 group flex flex-col"
+            className="flex-shrink-0 w-[82vw] sm:w-[48vw] md:w-[calc(33.333%-14px)] lg:w-[calc(25%-15px)] bg-surface-container-lowest rounded-sm overflow-hidden border border-outline-variant/30 hover:border-brand-gold/40 transition-all duration-300 group flex flex-col"
             style={{ scrollSnapAlign: "start" }}
           >
             {/* Image — 4:3 ratio */}
@@ -124,7 +124,7 @@ export default function DiscoverCarousel({ items }: DiscoverCarouselProps) {
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-on-surface-variant mb-2.5">
                 <span className="inline-flex items-center gap-1">
                   <span
-                    className="material-symbols-outlined text-[15px]"
+                    className="material-symbols-outlined text-[15px] text-brand-gold/50"
                     style={{ fontVariationSettings: "'FILL' 0" }}
                   >
                     {item.icon || "directions_car"}
@@ -141,7 +141,7 @@ export default function DiscoverCarousel({ items }: DiscoverCarouselProps) {
 
               <div className="flex items-center gap-1 text-xs text-on-surface-variant mb-3">
                 <span
-                  className="material-symbols-outlined text-[15px]"
+                  className="material-symbols-outlined text-[15px] text-brand-gold/50"
                   style={{ fontVariationSettings: "'FILL' 0" }}
                 >
                   schedule
@@ -152,7 +152,7 @@ export default function DiscoverCarousel({ items }: DiscoverCarouselProps) {
               {item.bestTime && (
                 <div className="flex items-center gap-1 text-xs text-brand-gold/80 mb-3 -mt-1">
                   <span
-                    className="material-symbols-outlined text-[15px]"
+                    className="material-symbols-outlined text-[15px] text-brand-gold/50"
                     style={{ fontVariationSettings: "'FILL' 0" }}
                   >
                     wb_twilight
@@ -166,7 +166,7 @@ export default function DiscoverCarousel({ items }: DiscoverCarouselProps) {
                 href={item.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-brand-gold font-label-caps text-[11px] uppercase tracking-widest hover:text-brand-gold-light transition-colors mt-auto pt-2 border-t border-outline-variant/50 group/link"
+                className="inline-flex items-center gap-1.5 text-brand-gold font-label-caps text-[11px] uppercase tracking-widest hover:text-brand-gold-light transition-colors mt-auto pt-2 gold-divider group/link"
               >
                 <span>Directions</span>
                 <span
