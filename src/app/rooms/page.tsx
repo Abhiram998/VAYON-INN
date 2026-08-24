@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import PreFooterCTA from "@/components/ui/PreFooterCTA";
 import { mockRooms } from "@/lib/mockData";
 
 export default function RoomsPage() {
@@ -199,6 +200,8 @@ export default function RoomsPage() {
           })}
         </div>
       </section>
+
+      <PreFooterCTA />
     </div>
   );
 }
