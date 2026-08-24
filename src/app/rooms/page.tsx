@@ -24,7 +24,7 @@ export default function RoomsPage() {
               Check In
             </label>
             <div className="border-b border-outline-variant focus-within:border-brand-gold transition-colors flex items-center py-2">
-              <span className="material-symbols-outlined text-brand-gold mr-2" style={{ fontVariationSettings: "'FILL' 0" }}>calendar_today</span>
+              <span className="material-symbols-outlined text-brand-gold/50 mr-2" style={{ fontVariationSettings: "'FILL' 0" }}>calendar_today</span>
               <input
                 type="date"
                 className="w-full bg-transparent border-none p-0 focus:ring-0 font-body-md text-body-md text-primary outline-none"
@@ -36,7 +36,7 @@ export default function RoomsPage() {
               Check Out
             </label>
             <div className="border-b border-outline-variant focus-within:border-brand-gold transition-colors flex items-center py-2">
-              <span className="material-symbols-outlined text-brand-gold mr-2" style={{ fontVariationSettings: "'FILL' 0" }}>calendar_today</span>
+              <span className="material-symbols-outlined text-brand-gold/50 mr-2" style={{ fontVariationSettings: "'FILL' 0" }}>calendar_today</span>
               <input
                 type="date"
                 className="w-full bg-transparent border-none p-0 focus:ring-0 font-body-md text-body-md text-primary outline-none"
@@ -48,7 +48,7 @@ export default function RoomsPage() {
               Guests
             </label>
             <div className="border-b border-outline-variant focus-within:border-brand-gold transition-colors flex items-center py-2">
-              <span className="material-symbols-outlined text-brand-gold mr-2" style={{ fontVariationSettings: "'FILL' 0" }}>person</span>
+              <span className="material-symbols-outlined text-brand-gold/50 mr-2" style={{ fontVariationSettings: "'FILL' 0" }}>person</span>
               <select className="w-full bg-transparent border-none p-0 focus:ring-0 font-body-md text-body-md text-primary appearance-none outline-none">
                 <option>1 Guest</option>
                 <option selected>2 Guests</option>
@@ -99,9 +99,9 @@ export default function RoomsPage() {
                       <div className="max-w-xl w-full">
                         <h2 className="font-headline-md text-2xl md:text-headline-md text-primary mb-2">{room.name}</h2>
                         <div className="flex flex-wrap gap-4 font-body-md text-sm sm:text-body-md text-on-surface-variant mb-4">
-                          <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[16px] sm:text-[18px] text-brand-gold" style={{ fontVariationSettings: "'FILL' 0" }}>square_foot</span> {room.size ? `${room.size} sq m` : "Size Placeholder"}</span>
-                          <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[16px] sm:text-[18px] text-brand-gold" style={{ fontVariationSettings: "'FILL' 0" }}>bed</span> {room.bedType || "Bed Placeholder"}</span>
-                          <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[16px] sm:text-[18px] text-brand-gold" style={{ fontVariationSettings: "'FILL' 0" }}>balcony</span> Private Balcony</span>
+                          <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[16px] sm:text-[18px] text-brand-gold/50" style={{ fontVariationSettings: "'FILL' 0" }}>square_foot</span> {room.size ? `${room.size} sq m` : "Size Placeholder"}</span>
+                          <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[16px] sm:text-[18px] text-brand-gold/50" style={{ fontVariationSettings: "'FILL' 0" }}>bed</span> {room.bedType || "Bed Placeholder"}</span>
+                          <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[16px] sm:text-[18px] text-brand-gold/50" style={{ fontVariationSettings: "'FILL' 0" }}>balcony</span> Private Balcony</span>
                         </div>
                         <p className="font-body-md text-sm sm:text-body-md text-on-surface-variant/80 line-clamp-3 lg:line-clamp-2">
                           {room.description}
@@ -112,7 +112,7 @@ export default function RoomsPage() {
                           {room.price ? `$${room.price}` : "POA"} <span className="font-body-md text-sm md:text-body-md text-on-surface-variant">/ night</span>
                         </span>
                         <div className="flex gap-4 w-full lg:w-auto">
-                          <button className="flex-1 lg:flex-none border border-brand-gold text-brand-gold font-label-caps text-[10px] sm:text-label-caps uppercase px-4 sm:px-6 py-3 hover:bg-surface-container transition-colors duration-300 tracking-widest">
+                          <button className="flex-1 lg:flex-none border border-brand-gold/40 text-brand-gold font-label-caps text-[10px] sm:text-label-caps uppercase px-4 sm:px-6 py-3 hover:bg-brand-gold/10 transition-colors duration-300 tracking-widest">
                             View Room
                           </button>
                           <button className="flex-1 lg:flex-none bg-brand-gold text-white font-label-caps text-[10px] sm:text-label-caps uppercase px-4 sm:px-6 py-3 hover:bg-on-surface-variant transition-colors duration-300 shadow-sm tracking-widest">
@@ -141,8 +141,8 @@ export default function RoomsPage() {
                     <div className="px-2">
                       <h2 className="font-headline-md text-2xl md:text-headline-md text-primary mb-2">{room.name}</h2>
                       <div className="flex flex-wrap gap-3 font-body-md text-sm sm:text-body-md text-on-surface-variant mb-4">
-                        <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[14px] sm:text-[16px] text-brand-gold" style={{ fontVariationSettings: "'FILL' 0" }}>square_foot</span> {room.size ? `${room.size} sq m` : "Size Placeholder"}</span>
-                        <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[14px] sm:text-[16px] text-brand-gold" style={{ fontVariationSettings: "'FILL' 0" }}>bed</span> {room.bedType || "Bed Placeholder"}</span>
+                        <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[14px] sm:text-[16px] text-brand-gold/50" style={{ fontVariationSettings: "'FILL' 0" }}>square_foot</span> {room.size ? `${room.size} sq m` : "Size Placeholder"}</span>
+                        <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[14px] sm:text-[16px] text-brand-gold/50" style={{ fontVariationSettings: "'FILL' 0" }}>bed</span> {room.bedType || "Bed Placeholder"}</span>
                       </div>
                       <div className="flex flex-wrap items-end justify-between mt-6 border-t border-outline-variant/30 pt-4 gap-4">
                         <span className="font-headline-md text-2xl md:text-headline-md text-primary">
@@ -176,15 +176,15 @@ export default function RoomsPage() {
                         </div>
                         <h2 className="font-display-lg-mobile text-4xl sm:text-5xl md:font-display-lg md:text-display-lg text-on-primary mb-4 drop-shadow-lg">{room.name}</h2>
                         <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-4 font-body-md text-sm sm:text-body-md text-on-primary/90 mb-4 md:mb-0">
-                          <span className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px] sm:text-[18px] text-brand-gold" style={{ fontVariationSettings: "'FILL' 0" }}>square_foot</span> {room.size ? `${room.size} sq m` : "Size Placeholder"}</span>
-                          <span className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px] sm:text-[18px] text-brand-gold" style={{ fontVariationSettings: "'FILL' 0" }}>king_bed</span> {room.bedType || "Bed Placeholder"}</span>
-                          <span className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px] sm:text-[18px] text-brand-gold" style={{ fontVariationSettings: "'FILL' 0" }}>pool</span> Private Plunge Pool</span>
+                          <span className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px] sm:text-[18px] text-brand-gold/50" style={{ fontVariationSettings: "'FILL' 0" }}>square_foot</span> {room.size ? `${room.size} sq m` : "Size Placeholder"}</span>
+                          <span className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px] sm:text-[18px] text-brand-gold/50" style={{ fontVariationSettings: "'FILL' 0" }}>king_bed</span> {room.bedType || "Bed Placeholder"}</span>
+                          <span className="flex items-center gap-2"><span className="material-symbols-outlined text-[16px] sm:text-[18px] text-brand-gold/50" style={{ fontVariationSettings: "'FILL' 0" }}>pool</span> Private Plunge Pool</span>
                         </div>
                       </div>
                       <div className="flex flex-col items-start md:items-end shrink-0 w-full md:w-auto">
                         <span className="font-display-lg-mobile text-3xl md:text-display-lg-mobile text-on-primary mb-4 drop-shadow-lg">{room.price ? `$${room.price}` : "POA"}</span>
                         <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-                          <button className="w-full sm:w-auto bg-brand-gold/10 backdrop-blur-md border border-brand-gold text-brand-gold font-label-caps text-[10px] sm:text-label-caps uppercase px-6 py-4 sm:py-3 hover:bg-brand-gold/20 transition-colors duration-300 tracking-widest">
+                          <button className="w-full sm:w-auto bg-transparent backdrop-blur-md border border-brand-gold/40 text-brand-gold font-label-caps text-[10px] sm:text-label-caps uppercase px-6 py-4 sm:py-3 hover:bg-brand-gold/10 transition-colors duration-300 tracking-widest">
                             View Details
                           </button>
                           <button className="w-full sm:w-auto bg-brand-gold text-white font-label-caps text-[10px] sm:text-label-caps uppercase px-6 py-4 sm:py-3 hover:bg-surface-tint transition-colors duration-300 tracking-widest">

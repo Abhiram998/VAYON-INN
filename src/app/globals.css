@@ -22,6 +22,10 @@
   --color-on-primary-container: #858383;
   --color-inverse-primary: #c8c6c5;
   --color-brand-gold: #c5a059;
+  --color-brand-gold-light: #d4b06a;
+  --color-brand-gold-deep: #a8873d;
+  --color-charcoal: #1a1a1a;
+  --color-charcoal-light: #2a2a2a;
   --color-secondary: #c5a059;
   --color-on-secondary: #ffffff;
   --color-secondary-container: #fed488;
@@ -123,4 +127,34 @@
     color: var(--color-on-background);
     @apply font-body-md text-body-md antialiased overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container;
   }
+}
+
+/* Gold Shimmer Animation */
+@keyframes gold-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@utility gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-brand-gold-deep) 0%,
+    var(--color-brand-gold-light) 25%,
+    var(--color-brand-gold) 50%,
+    var(--color-brand-gold-light) 75%,
+    var(--color-brand-gold-deep) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 6s ease-in-out infinite;
+}
+
+@utility gold-divider {
+  border-bottom: 1px solid color-mix(in srgb, var(--color-brand-gold) 30%, transparent);
 }

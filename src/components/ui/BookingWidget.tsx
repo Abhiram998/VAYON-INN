@@ -30,7 +30,7 @@ export default function BookingWidget() {
             </label>
             <div className="relative">
               <span
-                className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-brand-gold"
+                className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-brand-gold/50"
                 style={{ fontVariationSettings: "'FILL' 0" }}
               >
                 calendar_today
@@ -49,7 +49,7 @@ export default function BookingWidget() {
             </label>
             <div className="relative">
               <span
-                className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-brand-gold"
+                className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-brand-gold/50"
                 style={{ fontVariationSettings: "'FILL' 0" }}
               >
                 calendar_today

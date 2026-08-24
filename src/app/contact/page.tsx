@@ -30,7 +30,7 @@ export default function ContactPage() {
 
             <ScrollReveal className="space-y-6">
               <div className="flex items-start gap-4">
-                <span className="material-symbols-outlined text-brand-gold mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>location_on</span>
+                <span className="material-symbols-outlined text-brand-gold/50 mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>location_on</span>
                 <div>
                   <h3 className="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-1">Address</h3>
                   <p className="font-body-md text-body-md text-on-surface-variant">
@@ -40,7 +40,7 @@ export default function ContactPage() {
               </div>
               
               <div className="flex items-start gap-4">
-                <span className="material-symbols-outlined text-brand-gold mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>call</span>
+                <span className="material-symbols-outlined text-brand-gold/50 mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>call</span>
                 <div>
                   <h3 className="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-1">Telephone</h3>
                   <p className="font-body-md text-body-md text-on-surface-variant">{hotelConfig.phone || "Phone Placeholder"}</p>
@@ -48,7 +48,7 @@ export default function ContactPage() {
               </div>
               
               <div className="flex items-start gap-4">
-                <span className="material-symbols-outlined text-brand-gold mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>chat</span>
+                <span className="material-symbols-outlined text-brand-gold/50 mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>chat</span>
                 <div>
                   <h3 className="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-1">WhatsApp</h3>
                   <p className="font-body-md text-body-md text-on-surface-variant">{hotelConfig.phone || "WhatsApp Placeholder"}</p>
@@ -56,7 +56,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <span className="material-symbols-outlined text-brand-gold mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>mail</span>
+                <span className="material-symbols-outlined text-brand-gold/50 mt-1" style={{ fontVariationSettings: "'FILL' 0" }}>mail</span>
                 <div>
                   <h3 className="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-1">Email</h3>
                   <p className="font-body-md text-body-md text-on-surface-variant">{hotelConfig.email || "Email Placeholder"}</p>
@@ -82,13 +82,13 @@ export default function ContactPage() {
                 <input 
                   type="text" 
                   id="name" 
-                  className="w-full bg-transparent border-0 border-b border-outline-variant/50 focus:border-secondary focus:ring-0 px-0 py-3 font-body-md text-body-md text-primary placeholder-transparent peer transition-all duration-500 outline-none"
+                  className="w-full bg-transparent border-0 border-b border-outline-variant/50 focus:border-brand-gold focus:ring-0 px-0 py-3 font-body-md text-body-md text-primary placeholder-transparent peer transition-all duration-500 outline-none"
                   placeholder="Full Name" 
                   required 
                 />
                 <label 
                   htmlFor="name" 
-                  className="absolute left-0 -top-3.5 text-on-surface-variant text-sm transition-all duration-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-secondary peer-focus:text-sm"
+                  className="absolute left-0 -top-3.5 text-on-surface-variant text-sm transition-all duration-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-brand-gold peer-focus:text-sm"
                 >
                   Full Name
                 </label>
@@ -98,13 +98,13 @@ export default function ContactPage() {
                 <input 
                   type="email" 
                   id="email" 
-                  className="w-full bg-transparent border-0 border-b border-outline-variant/50 focus:border-secondary focus:ring-0 px-0 py-3 font-body-md text-body-md text-primary placeholder-transparent peer transition-all duration-500 outline-none"
+                  className="w-full bg-transparent border-0 border-b border-outline-variant/50 focus:border-brand-gold focus:ring-0 px-0 py-3 font-body-md text-body-md text-primary placeholder-transparent peer transition-all duration-500 outline-none"
                   placeholder="Email Address" 
                   required 
                 />
                 <label 
                   htmlFor="email" 
-                  className="absolute left-0 -top-3.5 text-on-surface-variant text-sm transition-all duration-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-secondary peer-focus:text-sm"
+                  className="absolute left-0 -top-3.5 text-on-surface-variant text-sm transition-all duration-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-brand-gold peer-focus:text-sm"
                 >
                   Email Address
                 </label>
@@ -114,12 +114,12 @@ export default function ContactPage() {
                 <input 
                   type="tel" 
                   id="phone" 
-                  className="w-full bg-transparent border-0 border-b border-outline-variant/50 focus:border-secondary focus:ring-0 px-0 py-3 font-body-md text-body-md text-primary placeholder-transparent peer transition-all duration-500 outline-none"
+                  className="w-full bg-transparent border-0 border-b border-outline-variant/50 focus:border-brand-gold focus:ring-0 px-0 py-3 font-body-md text-body-md text-primary placeholder-transparent peer transition-all duration-500 outline-none"
                   placeholder="Phone Number" 
                 />
                 <label 
                   htmlFor="phone" 
-                  className="absolute left-0 -top-3.5 text-on-surface-variant text-sm transition-all duration-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-secondary peer-focus:text-sm"
+                  className="absolute left-0 -top-3.5 text-on-surface-variant text-sm transition-all duration-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-brand-gold peer-focus:text-sm"
                 >
                   Phone Number
                 </label>
@@ -129,13 +129,13 @@ export default function ContactPage() {
                 <textarea 
                   id="message" 
                   rows={4}
-                  className="w-full bg-transparent border-0 border-b border-outline-variant/50 focus:border-secondary focus:ring-0 px-0 py-3 font-body-md text-body-md text-primary placeholder-transparent peer resize-none transition-all duration-500 outline-none"
+                  className="w-full bg-transparent border-0 border-b border-outline-variant/50 focus:border-brand-gold focus:ring-0 px-0 py-3 font-body-md text-body-md text-primary placeholder-transparent peer resize-none transition-all duration-500 outline-none"
                   placeholder="Your Message" 
                   required 
                 />
                 <label 
                   htmlFor="message" 
-                  className="absolute left-0 top-0 text-on-surface-variant text-sm transition-all duration-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:top-6 peer-focus:top-0 peer-focus:text-secondary peer-focus:text-sm"
+                  className="absolute left-0 top-0 text-on-surface-variant text-sm transition-all duration-500 peer-placeholder-shown:text-base peer-placeholder-shown:text-on-surface-variant peer-placeholder-shown:top-6 peer-focus:top-0 peer-focus:text-brand-gold peer-focus:text-sm"
                 >
                   Your Message
                 </label>

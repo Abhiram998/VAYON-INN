@@ -34,7 +34,7 @@ export default function TopNavBar() {
     >
       <div className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 w-full max-w-[var(--spacing-container-max)] mx-auto relative">
         <Link href="/" className="flex flex-col items-start" onClick={() => setIsOpen(false)}>
-          <span className="font-display-lg text-headline-md tracking-tighter text-brand-gold">
+          <span className="font-display-lg text-headline-md tracking-tighter gold-shimmer">
             {hotelConfig.name}
           </span>
           <span className="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant">

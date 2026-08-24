@@ -62,7 +62,7 @@ export default function Home() {
       <ScrollReveal className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
           <div className="md:col-span-5 md:col-start-2 relative z-10 mb-10 md:mb-0">
-            <h2 className="font-label-caps text-label-caps text-secondary uppercase tracking-[0.2em] mb-6">
+            <h2 className="font-label-caps text-label-caps text-brand-gold/70 uppercase tracking-[0.2em] mb-6">
               The Philosophy
             </h2>
             <h3 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8">
@@ -88,7 +88,7 @@ export default function Home() {
       </ScrollReveal>
 
       {/* 5. Featured Rooms */}
-      <ScrollReveal className="py-section-gap bg-surface-container-lowest overflow-hidden">
+      <ScrollReveal className="py-section-gap bg-surface-container-lowest overflow-hidden gold-divider">
         <div className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
           <div>
             <h2 className="font-label-caps text-label-caps text-brand-gold uppercase tracking-[0.2em] mb-4">
@@ -138,7 +138,7 @@ export default function Home() {
       </ScrollReveal>
 
       {/* 6. Hotel Amenities / Experience */}
-      <ScrollReveal className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto text-center">
+      <ScrollReveal className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto text-center gold-divider">
         <h2 className="font-label-caps text-label-caps text-brand-gold uppercase tracking-[0.2em] mb-4">
           Curated Moments
         </h2>
@@ -147,7 +147,7 @@ export default function Home() {
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-gutter lg:gap-gutter">
           <div className="flex flex-col items-center">
-            <div className="w-20 h-20 rounded-full border border-outline-variant flex items-center justify-center mb-6 text-brand-gold bg-surface transition-colors hover:bg-surface-container">
+            <div className="w-20 h-20 rounded-full border border-outline-variant flex items-center justify-center mb-6 text-brand-gold/50 bg-surface transition-colors hover:bg-surface-container">
               <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 0" }}>spa</span>
             </div>
             <h4 className="font-headline-md text-xl md:text-2xl text-on-surface mb-4">Serenity Spa</h4>
@@ -156,7 +156,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-20 h-20 rounded-full border border-outline-variant flex items-center justify-center mb-6 text-brand-gold bg-surface transition-colors hover:bg-surface-container">
+            <div className="w-20 h-20 rounded-full border border-outline-variant flex items-center justify-center mb-6 text-brand-gold/50 bg-surface transition-colors hover:bg-surface-container">
               <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 0" }}>restaurant</span>
             </div>
             <h4 className="font-headline-md text-xl md:text-2xl text-on-surface mb-4">Fine Dining</h4>
@@ -165,7 +165,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <div className="w-20 h-20 rounded-full border border-outline-variant flex items-center justify-center mb-6 text-brand-gold bg-surface transition-colors hover:bg-surface-container">
+            <div className="w-20 h-20 rounded-full border border-outline-variant flex items-center justify-center mb-6 text-brand-gold/50 bg-surface transition-colors hover:bg-surface-container">
               <span className="material-symbols-outlined text-4xl" style={{ fontVariationSettings: "'FILL' 0" }}>fitness_center</span>
             </div>
             <h4 className="font-headline-md text-xl md:text-2xl text-on-surface mb-4">Wellness Center</h4>
@@ -202,7 +202,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 text-center">
-            <Link href="/gallery" className="inline-block bg-transparent border border-primary text-primary px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors">
+            <Link href="/gallery" className="inline-block bg-transparent border border-brand-gold/40 text-brand-gold px-8 py-3 font-label-caps text-label-caps uppercase tracking-widest hover:bg-brand-gold/10 transition-colors">
               View Full Gallery
             </Link>
           </div>
@@ -210,7 +210,7 @@ export default function Home() {
       </ScrollReveal>
 
       {/* 8. Nearby Destinations */}
-      <ScrollReveal className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto">
+      <ScrollReveal className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto gold-divider">
         <h2 className="font-label-caps text-label-caps text-brand-gold uppercase tracking-[0.2em] mb-4">Discover</h2>
         <h3 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-12">Nearby Attractions</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

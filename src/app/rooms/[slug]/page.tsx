@@ -96,7 +96,7 @@ export default async function RoomDetailsPage({ params }: Props) {
           {/* Glass Title Overlay */}
           <div className="absolute bottom-0 left-0 w-full p-margin-mobile md:p-margin-desktop">
             <div className="bg-surface/70 backdrop-blur-xl border border-outline-variant/20 max-w-2xl p-6 md:p-12">
-              <span className="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-4">
+              <span className="font-label-caps text-label-caps text-brand-gold/70 uppercase tracking-widest block mb-4">
                 The Premium Collection
               </span>
               <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 drop-shadow-sm">
@@ -104,15 +104,15 @@ export default async function RoomDetailsPage({ params }: Props) {
               </h1>
               <div className="flex flex-wrap items-center gap-4 text-on-surface-variant font-body-md text-body-md">
                 <span className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 0" }}>square_foot</span> 
+                  <span className="material-symbols-outlined text-xl text-brand-gold/50" style={{ fontVariationSettings: "'FILL' 0" }}>square_foot</span> 
                   {room.size ? `${room.size} sq m` : "Size Placeholder"}
                 </span>
                 <span className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 0" }}>group</span> 
+                  <span className="material-symbols-outlined text-xl text-brand-gold/50" style={{ fontVariationSettings: "'FILL' 0" }}>group</span> 
                   Up to {room.maxGuests || 2} Guests
                 </span>
                 <span className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-xl" style={{ fontVariationSettings: "'FILL' 0" }}>bed</span> 
+                  <span className="material-symbols-outlined text-xl text-brand-gold/50" style={{ fontVariationSettings: "'FILL' 0" }}>bed</span> 
                   {room.bedType || "Bed Placeholder"}
                 </span>
               </div>
@@ -126,7 +126,7 @@ export default async function RoomDetailsPage({ params }: Props) {
           <div className="lg:col-span-8 space-y-16 md:space-y-section-gap">
             {/* Description */}
             <ScrollReveal>
-              <h2 className="font-headline-md text-headline-md text-primary mb-6 md:mb-8 border-b border-outline-variant pb-4">
+              <h2 className="font-headline-md text-headline-md text-primary mb-6 md:mb-8 gold-divider pb-4">
                 A Sanctuary of Elegance
               </h2>
               <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
@@ -139,7 +139,7 @@ export default async function RoomDetailsPage({ params }: Props) {
 
             {/* Amenities (Bento Grid Style) */}
             <ScrollReveal>
-              <h2 className="font-headline-md text-headline-md text-primary mb-6 md:mb-8 border-b border-outline-variant pb-4">
+              <h2 className="font-headline-md text-headline-md text-primary mb-6 md:mb-8 gold-divider pb-4">
                 Suite Amenities
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -153,7 +153,7 @@ export default async function RoomDetailsPage({ params }: Props) {
                 ].map((amenity, idx) => (
                   <ScrollReveal key={idx} delay={idx * 100} className="h-full">
                     <div className="group bg-surface-container-low p-6 flex flex-col items-center text-center border border-surface-variant transition-all duration-700 hover:bg-surface-container hover:-translate-y-1 hover:shadow-lg cursor-pointer h-full">
-                      <span className="material-symbols-outlined text-3xl text-brand-gold mb-4 transition-transform duration-700 group-hover:scale-110" style={{ fontVariationSettings: "'FILL' 0" }}>
+                      <span className="material-symbols-outlined text-3xl text-brand-gold/50 mb-4 transition-transform duration-700 group-hover:scale-110" style={{ fontVariationSettings: "'FILL' 0" }}>
                         {amenity.icon}
                       </span>
                       <h3 className="font-body-md text-body-md text-primary">{amenity.text}</h3>
@@ -165,7 +165,7 @@ export default async function RoomDetailsPage({ params }: Props) {
 
             {/* Secondary Gallery */}
             <ScrollReveal>
-              <h2 className="font-headline-md text-headline-md text-primary mb-6 md:mb-8 border-b border-outline-variant pb-4">
+              <h2 className="font-headline-md text-headline-md text-primary mb-6 md:mb-8 gold-divider pb-4">
                 Gallery
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-gutter">
@@ -208,14 +208,14 @@ export default async function RoomDetailsPage({ params }: Props) {
               <form className="space-y-6">
                 {/* Dates */}
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="border-b border-outline hover:border-secondary transition-colors pb-2">
+                  <div className="border-b border-outline hover:border-brand-gold/40 transition-colors pb-2">
                     <label className="font-label-caps text-label-caps text-on-surface-variant block mb-2 uppercase">Check-In</label>
                     <input
                       type="date"
                       className="w-full bg-transparent border-none p-0 font-body-md text-body-md text-primary focus:ring-0 cursor-pointer outline-none"
                     />
                   </div>
-                  <div className="border-b border-outline hover:border-secondary transition-colors pb-2">
+                  <div className="border-b border-outline hover:border-brand-gold/40 transition-colors pb-2">
                     <label className="font-label-caps text-label-caps text-on-surface-variant block mb-2 uppercase">Check-Out</label>
                     <input
                       type="date"
@@ -224,7 +224,7 @@ export default async function RoomDetailsPage({ params }: Props) {
                   </div>
                 </div>
                 {/* Guests */}
-                <div className="border-b border-outline hover:border-secondary transition-colors pb-2">
+                <div className="border-b border-outline hover:border-brand-gold/40 transition-colors pb-2">
                   <label className="font-label-caps text-label-caps text-on-surface-variant block mb-2 uppercase">Guests</label>
                   <select className="w-full bg-transparent border-none p-0 font-body-md text-body-md text-primary focus:ring-0 cursor-pointer outline-none appearance-none">
                     <option>2 Adults, 0 Children</option>
