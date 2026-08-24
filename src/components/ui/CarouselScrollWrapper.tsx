@@ -39,18 +39,12 @@ export default function CarouselScrollWrapper({ children, className = "" }: Caro
   };
 
   return (
-    <div 
-      className={`relative w-full group ${className}`}
-      style={{
-        maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
-        WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
-      }}
-    >
+    <div className={`relative w-full group ${className}`}>
       {/* Left Navigation Arrow (Hidden on mobile) */}
       <button
         onClick={() => scroll("left")}
         disabled={!canScrollLeft}
-        className={`absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-brand-gold/50 bg-surface/80 backdrop-blur-sm hidden md:flex items-center justify-center text-brand-gold transition-all duration-300 hover:bg-brand-gold hover:text-white disabled:opacity-0 disabled:pointer-events-none shadow-sm ${
+        className={`absolute left-4 md:left-6 lg:left-8 top-[156px] lg:top-[175px] -translate-y-1/2 z-50 w-12 h-12 rounded-full border border-brand-gold/50 bg-surface/80 backdrop-blur-sm hidden md:flex items-center justify-center text-brand-gold transition-all duration-300 hover:bg-brand-gold hover:text-white shadow-md disabled:opacity-0 disabled:pointer-events-none ${
           !canScrollLeft ? "opacity-0" : "opacity-0 group-hover:opacity-100"
         }`}
         aria-label="Scroll left"
@@ -62,7 +56,7 @@ export default function CarouselScrollWrapper({ children, className = "" }: Caro
       <button
         onClick={() => scroll("right")}
         disabled={!canScrollRight}
-        className={`absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-brand-gold/50 bg-surface/80 backdrop-blur-sm hidden md:flex items-center justify-center text-brand-gold transition-all duration-300 hover:bg-brand-gold hover:text-white disabled:opacity-0 disabled:pointer-events-none shadow-sm ${
+        className={`absolute right-4 md:right-6 lg:right-8 top-[156px] lg:top-[175px] -translate-y-1/2 z-50 w-12 h-12 rounded-full border border-brand-gold/50 bg-surface/80 backdrop-blur-sm hidden md:flex items-center justify-center text-brand-gold transition-all duration-300 hover:bg-brand-gold hover:text-white shadow-md disabled:opacity-0 disabled:pointer-events-none ${
           !canScrollRight ? "opacity-0" : "opacity-0 group-hover:opacity-100"
         }`}
         aria-label="Scroll right"
@@ -75,6 +69,10 @@ export default function CarouselScrollWrapper({ children, className = "" }: Caro
         ref={scrollContainerRef}
         onScroll={updateScrollButtons}
         className="flex overflow-x-auto snap-x snap-mandatory gap-6 md:gap-8 pb-8 pt-4 hide-scrollbar px-margin-mobile md:px-margin-desktop"
+        style={{
+          maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)'
+        }}
       >
         {children}
       </div>

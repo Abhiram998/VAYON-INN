@@ -172,3 +172,10 @@
 @utility gold-divider {
   border-bottom: 1px solid color-mix(in srgb, var(--color-brand-gold) 30%, transparent);
 }
+
+@utility hide-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
