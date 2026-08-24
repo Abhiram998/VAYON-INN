@@ -46,7 +46,7 @@ export const topPlaces: DiscoverItem[] = [
     travelTime: '~40 min drive',
     hours: 'Open 24 hours (neighborhood)',
     bestTime: 'Morning or late afternoon',
-    image: 'https://images.unsplash.com/photo-1590050752117-238cb20e10a4?w=600&h=450&fit=crop',
+    image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=450&fit=crop',
     mapUrl: mapsUrl('Fort Kochi'),
     slug: 'fort-kochi'
   },
@@ -71,7 +71,7 @@ export const topPlaces: DiscoverItem[] = [
     distance: '~25 km',
     travelTime: '~45 min drive',
     hours: '10 AM – 5 PM, closed Fri',
-    image: 'https://images.unsplash.com/photo-1567157577867-05ccb1388e13?w=600&h=450&fit=crop',
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=450&fit=crop',
     mapUrl: mapsUrl('Mattancherry Palace Dutch Palace'),
     slug: 'mattancherry-palace'
   },

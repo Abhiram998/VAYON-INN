@@ -3,6 +3,7 @@ import Link from "next/link";
 import BookingWidget from "@/components/ui/BookingWidget";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import RoomCard from "@/components/ui/RoomCard";
+import CarouselScrollWrapper from "@/components/ui/CarouselScrollWrapper";
 import { mockRooms, hotelConfig } from "@/lib/mockData";
 import { topPlaces } from "@/data/discover";
 
@@ -101,20 +102,14 @@ export default function Home() {
         </div>
 
         <div className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto pb-8 relative">
-          {/* Marquee Track Container with proper CSS mask-image fade */}
-          <div 
-            className="w-full overflow-hidden relative"
-            style={{ 
-              maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
-              WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
-            }}
-          >
-            <div className="flex animate-marquee hover:[animation-play-state:paused] gap-6 md:gap-gutter w-max">
-            {/* Duplicate array to create two identical halves for seamless -50% translation */}
-            {[...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms, ...featuredRooms].map((room, idx) => (
-              <RoomCard room={room} key={`${room.id}-${idx}`} className="w-80 lg:w-96 shrink-0" variant="minimal" />
-            ))}
-            </div>
+          <div className="mt-12 overflow-hidden -mx-margin-mobile md:-mx-margin-desktop">
+            <CarouselScrollWrapper>
+              {mockRooms.map((room) => (
+                <div key={room.id} className="snap-start shrink-0">
+                  <RoomCard room={room} className="w-[85vw] sm:w-[400px] lg:w-[450px]" variant="minimal" />
+                </div>
+              ))}
+            </CarouselScrollWrapper>
           </div>
         </div>
       </ScrollReveal>
@@ -195,29 +190,33 @@ export default function Home() {
       <ScrollReveal className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto gold-divider">
         <h2 className="font-label-caps text-label-caps text-brand-gold uppercase tracking-[0.2em] mb-4">Discover</h2>
         <h3 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-12">Nearby Attractions</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-gutter">
-          {featuredDestinations.map((dest) => (
-            <Link href="/discover" key={dest.id} className="group block">
-              <div className="relative aspect-[4/3] overflow-hidden mb-4 rounded-xl bg-surface-dim">
-                <Image
-                  src={dest.image}
-                  alt={`${dest.name} in Kochi`}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
+        <div className="mt-8 -mx-margin-mobile md:-mx-margin-desktop">
+          <CarouselScrollWrapper>
+            {featuredDestinations.map((dest) => (
+              <div key={dest.id} className="snap-start shrink-0 w-[85vw] sm:w-[350px] lg:w-[400px]">
+                <Link href={`/discover#${dest.slug}`} className="group block h-full">
+                  <div className="relative aspect-[4/3] overflow-hidden mb-4 rounded-sm bg-surface-dim">
+                    <Image
+                      src={dest.image}
+                      alt={`${dest.name} in Kochi`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                  </div>
+                  <h4 className="font-headline-md text-lg md:text-xl text-on-surface mb-1.5 group-hover:text-brand-gold transition-colors">
+                    {dest.name}
+                  </h4>
+                  <p className="font-body-md text-sm text-on-surface-variant mb-2 line-clamp-2">
+                    {dest.description}
+                  </p>
+                  <p className="font-label-caps text-label-caps text-brand-gold/70 uppercase tracking-widest">
+                    {dest.distance} · {dest.travelTime}
+                  </p>
+                </Link>
               </div>
-              <h4 className="font-headline-md text-lg md:text-xl text-on-surface mb-1.5 group-hover:text-brand-gold transition-colors">
-                {dest.name}
-              </h4>
-              <p className="font-body-md text-sm text-on-surface-variant mb-2 line-clamp-2">
-                {dest.description}
-              </p>
-              <p className="font-label-caps text-label-caps text-brand-gold/70 uppercase tracking-widest">
-                {dest.distance} · {dest.travelTime}
-              </p>
-            </Link>
-          ))}
+            ))}
+          </CarouselScrollWrapper>
         </div>
         <div className="mt-10 text-center">
           <Link
