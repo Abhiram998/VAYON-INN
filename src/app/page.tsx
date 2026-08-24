@@ -104,7 +104,7 @@ export default function Home() {
         </div>
 
         <div className="px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto pb-8 relative">
-          <div className="mt-12 overflow-hidden -mx-margin-mobile md:-mx-margin-desktop">
+          <div className="mt-12 overflow-hidden">
             <CarouselScrollWrapper>
               {featuredRooms.map((room, idx) => (
                 <div key={`${room.id}-${idx}`} className="snap-start shrink-0">
@@ -192,7 +192,7 @@ export default function Home() {
       <ScrollReveal className="py-16 md:py-24 px-margin-mobile md:px-margin-desktop max-w-[var(--spacing-container-max)] mx-auto gold-divider">
         <h2 className="font-label-caps text-label-caps text-brand-gold uppercase tracking-[0.2em] mb-4">Discover</h2>
         <h3 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-12">Nearby Attractions</h3>
-        <div className="mt-8 -mx-margin-mobile md:-mx-margin-desktop">
+        <div className="mt-8">
           <CarouselScrollWrapper>
             {featuredDestinations.map((dest) => (
               <div key={dest.id} className="snap-start shrink-0 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333333%-1.333333rem)]">
